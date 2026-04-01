@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="brief">
+  <header class="brief-header">
+    <span class="brief-number">Brief {{ page.number }}</span>
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="brief-subtitle">{{ page.subtitle }}</p>{% endif %}
+    <p class="brief-meta">{{ page.author }} | {{ page.date | date: "%B %Y" }} | {{ page.status }}</p>
+  </header>
+  <div class="brief-content">
+    {{ content }}
+  </div>
+</article>

@@ -1,0 +1,30 @@
+---
+layout: default
+title: Blog
+description: Project updates, analytical notes, and methodology discussions
+---
+
+<div class="section">
+  <h2>Blog</h2>
+  <p>Project updates, methodology notes, and analytical commentary.</p>
+</div>
+
+{% if site.posts.size > 0 %}
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.excerpt %}<p style="font-size: 0.9rem; color: var(--text-secondary);">{{ post.excerpt | strip_html | truncate: 200 }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p style="color: var(--text-secondary); margin-top: 2rem;">
+  No posts yet. Analytical updates and methodology discussions will appear here.
+</p>
+{% endif %}
+
+<p style="margin-top: 2rem;">
+  <a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a>
+</p>

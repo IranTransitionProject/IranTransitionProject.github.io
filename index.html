@@ -1,0 +1,145 @@
+---
+layout: default
+title: Home
+---
+
+<div class="hero">
+  <h2>Independent Analytical Framework for Iranian Regime Architecture and Transition Dynamics</h2>
+  <p>
+    Structured analysis connecting available information &mdash; regime primary sources,
+    Farsi media, institutional architecture &mdash; to actionable understanding.
+    All outputs published openly.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Analytical Outputs</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Iran Transition Baseline (ITB)</h3>
+      <p>
+        8 pillars, 22 analytical modules mapping how the regime actually works.
+        86 tracked variables, 57 registered research gaps.
+      </p>
+      <span class="badge">Active</span>
+      <span class="badge secondary">22 modules</span>
+    </div>
+    <div class="card">
+      <h3>Iran Stress Architecture (ISA)</h3>
+      <p>
+        14 documented analytical traps where standard frameworks fail.
+        30 observations. 12 transition scenario models.
+      </p>
+      <span class="badge">Active</span>
+      <span class="badge secondary">12 scenarios</span>
+    </div>
+    <div class="card">
+      <h3><a href="{{ '/briefs/' | relative_url }}">Convergence Briefs</a></h3>
+      <p>
+        Policy-focused analysis for professionals and journalists.
+        Each brief anchors claims to the ITB baseline with full epistemic tagging.
+      </p>
+      <span class="badge">14 published</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Methodology</h2>
+  <p>
+    The project applies structured analytical standards to Iran analysis:
+    <strong>factional neutrality</strong> (no faction is treated as reformist or hardline by default),
+    <strong>epistemic tagging</strong> (every claim marked as Fact, Inference, Uncertain, or Speculation),
+    <strong>source discipline</strong> (5-tier source hierarchy with provenance tracking), and
+    <strong>full transparency</strong> (all instruction files, methodology, and AI usage are public).
+  </p>
+  <p style="margin-top: 1rem;">
+    AI (Claude by Anthropic) is used as an analytical tool, not a source.
+    All AI instructions are committed to version control. The framework database
+    is the source of truth &mdash; maintained as a live Git repository with
+    every analytical decision tracked in commit history.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Technology</h2>
+  <p>
+    The analytical engine is built on open-source infrastructure developed
+    as part of this project. These tools are available independently for
+    anyone building multi-agent AI workflows.
+  </p>
+  <div class="card-grid">
+    <div class="card">
+      <h3><a href="https://github.com/IranTransitionProject/loom">Loom</a></h3>
+      <p>
+        Actor-based Python framework for orchestrating multi-LLM workflows
+        via NATS messaging. Workers, pipelines, MCP gateway, Workshop UI.
+      </p>
+      <span class="badge">v0.8.0</span>
+      <span class="badge secondary">Python</span>
+      <a href="https://irantransitionproject.github.io/loom/" style="font-size:0.85rem;">API Docs</a>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/IranTransitionProject/baft">Baft</a></h3>
+      <p>
+        ITP analytical engine &mdash; 13 specialized worker configurations,
+        3-tier pipeline orchestration, blind audit system, session management.
+      </p>
+      <span class="badge">v0.3.0</span>
+      <span class="badge secondary">Application</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/IranTransitionProject/docman">Docman</a></h3>
+      <p>
+        Document processing pipeline. PDF/DOCX extraction, LLM classification,
+        summarization, DuckDB persistence with vector search.
+      </p>
+      <span class="badge">v0.5.0</span>
+      <span class="badge secondary">Application</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Community</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3><a href="https://github.com/IranTransitionProject/framework/discussions">Framework Discussions</a></h3>
+      <p>
+        Analytical discussions about the ITP framework content &mdash;
+        methodology questions, module feedback, scenario analysis, research gaps.
+      </p>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/IranTransitionProject/loom/discussions">Loom Discussions</a></h3>
+      <p>
+        Technical support for Loom developers and users &mdash;
+        architecture questions, integration help, feature requests.
+      </p>
+    </div>
+    <div class="card">
+      <h3><a href="{{ '/community/' | relative_url }}">Issue Trackers &amp; Contributing</a></h3>
+      <p>
+        Bug reports, feature requests, and contribution guidelines
+        for all project repositories.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Recent Posts</h2>
+  {% if site.posts.size > 0 %}
+  <ul class="post-list">
+    {% for post in site.posts limit:5 %}
+    <li>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <p style="margin-top: 1rem;"><a href="{{ '/blog/' | relative_url }}">All posts &rarr;</a></p>
+  {% else %}
+  <p style="color: var(--text-secondary);">No posts yet. Check back soon.</p>
+  {% endif %}
+</div>
