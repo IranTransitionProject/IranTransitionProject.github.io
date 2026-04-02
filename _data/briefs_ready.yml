@@ -1,0 +1,3 @@
+# Set to true after the first publish-briefs workflow run populates downloads/
+# The briefs page conditionally shows download links based on this flag.
+ready: true
