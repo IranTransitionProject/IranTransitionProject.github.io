@@ -12,11 +12,11 @@ for anyone building multi-agent AI workflows.
 
 ---
 
-### Loom
+### Heddle
 
 **Actor-based Python framework for orchestrating multi-LLM workflows.**
 
-Loom splits AI work into focused, testable steps with typed contracts
+Heddle splits AI work into focused, testable steps with typed contracts
 instead of one monolithic prompt. Workers communicate via NATS messaging,
 enabling parallel execution across different model tiers (local Ollama,
 Claude Sonnet, Claude Opus).
@@ -27,16 +27,16 @@ Claude Sonnet, Claude Opus).
 - OpenTelemetry distributed tracing
 
 **Links:**
-[GitHub](https://github.com/IranTransitionProject/loom) |
-[API Documentation](https://irantransitionproject.github.io/loom/) |
-[Issues](https://github.com/IranTransitionProject/loom/issues) |
-[Discussions](https://github.com/IranTransitionProject/loom/discussions)
+[GitHub](https://github.com/getheddle/heddle) |
+[API Documentation](https://getheddle.github.io/heddle/) |
+[Issues](https://github.com/getheddle/heddle/issues) |
+[Discussions](https://github.com/getheddle/heddle/discussions)
 
 ---
 
 ### Baft
 
-**ITP analytical engine -- application layer on Loom.**
+**ITP analytical engine -- application layer on Heddle.**
 
 Baft provides 13 specialized worker configurations, 3-tier pipeline
 orchestration, a blind audit system for publication quality control,
@@ -55,7 +55,7 @@ and session management for multi-analyst support.
 
 ### Docman
 
-**Document processing pipeline built on Loom.**
+**Document processing pipeline built on Heddle.**
 
 Extracts content from PDF, DOCX, PPTX, XLSX, and HTML files using
 adaptive two-tier extraction (MarkItDown for speed, Docling for depth).
@@ -68,11 +68,11 @@ and vector search.
 
 ---
 
-### Framework
+### Baseline
 
 **ITP analytical database -- YAML source of truth.**
 
-The framework repository contains all structured analytical data:
+The baseline repository contains all structured analytical data:
 22 content modules, 86 tracked variables, 57 research gaps,
 12 scenario models, and 14 convergence briefs. Maintained as a
 live Git repository with every analytical decision tracked in
@@ -82,6 +82,6 @@ Validated by JSON Schema on every commit. Built into PDF releases
 via Jinja2 templates.
 
 **Links:**
-[GitHub](https://github.com/IranTransitionProject/framework) |
-[Discussions](https://github.com/IranTransitionProject/framework/discussions) |
-[Releases (PDF)](https://github.com/IranTransitionProject/framework/releases)
+[GitHub](https://github.com/IranTransitionProject/baseline) |
+[Discussions](https://github.com/IranTransitionProject/baseline/discussions) |
+[Releases (PDF)](https://github.com/IranTransitionProject/baseline/releases)
